@@ -23,15 +23,13 @@ public class Conexao {
             Class.forName(driver);
             connection = DriverManager.getConnection(local, user, pass);
 
-            System.out.println("Conectou com sucesso!");
-
         } catch (ClassNotFoundException ex) {
             System.out.println("Erro ao conectar a database " + ex);
         } catch (SQLException ex) {
             System.out.println("Erro ao conectar a database " + ex);
 
         }
-        
+
         return connection;
     }
 

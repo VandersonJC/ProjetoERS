@@ -3,13 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Documents/NetBeansProjects/ProjetoERS/src/entities/Saida.java</file>
-            <file>file:/D:/Documents/NetBeansProjects/ProjetoERS/src/control/Conexao_Embalagem.java</file>
-            <file>file:/D:/Documents/NetBeansProjects/ProjetoERS/src/control/Conexao_Entrada.java</file>
-            <file>file:/D:/Documents/NetBeansProjects/ProjetoERS/src/control/Conexao_Saida.java</file>
-            <file>file:/D:/Documents/NetBeansProjects/ProjetoERS/src/control/Conexao_Lista_Precos.java</file>
-            <file>file:/D:/Documents/NetBeansProjects/ProjetoERS/src/control/Conexao.java</file>
+            <file>file:/D:/Documents/NetBeansProjects/ProjetoERS/src/view/DialogIncluirProduto.java</file>
+            <file>file:/D:/Documents/NetBeansProjects/ProjetoERS/src/view/TelaProduto.java</file>
+            <file>file:/D:/Documents/NetBeansProjects/ProjetoERS/src/application/Program.java</file>
             <file>file:/D:/Documents/NetBeansProjects/ProjetoERS/src/control/Conexao_Produto.java</file>
+            <file>file:/D:/Documents/NetBeansProjects/ProjetoERS/src/view/TelaGeral.java</file>
         </group>
     </open-files>
 </project-private>

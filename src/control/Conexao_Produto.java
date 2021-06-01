@@ -3,8 +3,8 @@ package control;
 import java.sql.ResultSet;
 import java.sql.PreparedStatement;
 import java.sql.Connection;
-import entities.Embalagem;
-import entities.Produto;
+import entities.*;
+import control.*;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -66,7 +66,7 @@ public class Conexao_Produto {
         String sql = "UPDATE item_produto SET nome = ?,ean = ?,preco = ?,peso = ?,garantia = ?,custo = ?,marca = ?,descricao = ?,imagem = ?,id_embalagem = ?,estoque_minimo = ?,quantidade = ? WHERE id_item = ?";
 
         try {
-  
+
             stmt = (PreparedStatement) con.prepareStatement(sql);
             stmt.setString(1, produto.getNome());
             stmt.setString(2, produto.getEan());
@@ -114,7 +114,7 @@ public class Conexao_Produto {
                 produto.setMarca(response.getString("marca"));
                 produto.setDescricao(response.getString("descricao"));
                 produto.setImagem(response.getBytes("imagem"));
-                produto.setEmbalagem(response.getObject("id_embalagem", Embalagem.class));
+                produto.setEmbalagem(getEmbalagem(response.getInt("id_embalagem")));
                 produto.setEstoque_minimo(response.getInt("estoque_minimo"));
                 produto.setQuantidade(response.getInt("quantidade"));
 
@@ -129,6 +129,26 @@ public class Conexao_Produto {
         }
 
         return lista;
+    }
+
+    public Embalagem getEmbalagem(int id_embalagem) {
+        Conexao_Embalagem ce = new Conexao_Embalagem();
+        int caixa = id_embalagem;
+        Embalagem embalagem = new Embalagem();
+        for (int i = 0; i < ce.listar().size(); i++) {
+
+            if (ce.listar().get(i).getId_embalagem().equals(caixa)) {
+
+                embalagem.setId_embalagem(ce.listar().get(i).getId_embalagem());
+                embalagem.setDescricao(ce.listar().get(i).getDescricao());
+                embalagem.setComprimento(ce.listar().get(i).getComprimento());
+                embalagem.setAltura(ce.listar().get(i).getAltura());
+                embalagem.setLargura(ce.listar().get(i).getLargura());
+
+            }
+
+        }
+        return embalagem;
     }
 
 }
