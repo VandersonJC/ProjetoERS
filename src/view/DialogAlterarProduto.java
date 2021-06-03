@@ -251,6 +251,11 @@ public class DialogAlterarProduto extends javax.swing.JDialog {
         btnSalvar.setFont(new java.awt.Font("Arial Black", 1, 10)); // NOI18N
         btnSalvar.setForeground(new java.awt.Color(255, 255, 255));
         btnSalvar.setText("Salvar");
+        btnSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalvarActionPerformed(evt);
+            }
+        });
         jpProduto.add(btnSalvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 520, -1, -1));
 
         btnVoltar.setBackground(new java.awt.Color(0, 0, 140));
@@ -402,6 +407,10 @@ public class DialogAlterarProduto extends javax.swing.JDialog {
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSalvarActionPerformed
 
     /**
      * @param args the command line arguments

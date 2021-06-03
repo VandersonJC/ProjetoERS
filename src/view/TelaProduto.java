@@ -128,8 +128,6 @@ public class TelaProduto extends javax.swing.JFrame {
         jtProdutos.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jtProdutos.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jtProdutos.setShowGrid(false);
-        jtProdutos.setShowHorizontalLines(false);
-        jtProdutos.setShowVerticalLines(false);
         jspTabelaProdutos.setViewportView(jtProdutos);
 
         jTextField1.setText("Buscar");
@@ -183,24 +181,27 @@ public class TelaProduto extends javax.swing.JFrame {
         jpCentroLayout.setHorizontalGroup(
             jpCentroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpCentroLayout.createSequentialGroup()
-                .addGroup(jpCentroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(jpCentroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jpCentroLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btnAlterarProduto)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnExcluirProduto)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnIncluirProduto))
-                    .addGroup(jpCentroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jpCentroLayout.createSequentialGroup()
-                            .addGap(95, 95, 95)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(btnBuscar))
-                        .addGroup(jpCentroLayout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(jspTabelaProdutos, javax.swing.GroupLayout.PREFERRED_SIZE, 984, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(52, Short.MAX_VALUE))
+                        .addGroup(jpCentroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jpCentroLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(btnAlterarProduto)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnExcluirProduto)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnIncluirProduto))
+                            .addGroup(jpCentroLayout.createSequentialGroup()
+                                .addGap(95, 95, 95)
+                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnBuscar)
+                                .addGap(541, 541, 541)))
+                        .addGap(0, 71, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpCentroLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jspTabelaProdutos, javax.swing.GroupLayout.PREFERRED_SIZE, 984, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         jpCentroLayout.setVerticalGroup(
             jpCentroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
