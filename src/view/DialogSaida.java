@@ -26,14 +26,14 @@ public class DialogSaida extends javax.swing.JDialog {
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        tblListaDeSaida = new javax.swing.JTable();
         jScrollPane2 = new javax.swing.JScrollPane();
-        tblListaDeProdutosSaida = new javax.swing.JTable();
+        tblListaDeSaida = new javax.swing.JTable();
         jLabel5 = new javax.swing.JLabel();
-        tfdQuantidade = new javax.swing.JTextField();
+        tfdQuantidadeSaida = new javax.swing.JTextField();
         btnEfetuarSaida = new javax.swing.JButton();
         btnAdicionarSaida = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        tblListaDeProdutosParaAddNaSaida = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -54,67 +54,44 @@ public class DialogSaida extends javax.swing.JDialog {
         jLabel4.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 140));
         jLabel4.setText("LISTA DE SAÍDA");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 20, -1, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 20, -1, -1));
 
         tblListaDeSaida.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         tblListaDeSaida.setForeground(new java.awt.Color(0, 0, 140));
         tblListaDeSaida.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "Descrição", "Preço", "Quantidade"
+                "SKU", "Descrição", "Preço", "Quantidade"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false
+                false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tblListaDeSaida);
+        tblListaDeSaida.setGridColor(new java.awt.Color(0, 0, 0));
+        tblListaDeSaida.setSelectionBackground(new java.awt.Color(153, 204, 255));
+        tblListaDeSaida.setSelectionForeground(new java.awt.Color(255, 255, 254));
+        jScrollPane2.setViewportView(tblListaDeSaida);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 50, 330, 320));
-
-        tblListaDeProdutosSaida.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
-        tblListaDeProdutosSaida.setForeground(new java.awt.Color(0, 0, 140));
-        tblListaDeProdutosSaida.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
-            },
-            new String [] {
-                "Descrição", "Preço", "Quantidade"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        tblListaDeProdutosSaida.setGridColor(new java.awt.Color(0, 0, 0));
-        jScrollPane2.setViewportView(tblListaDeProdutosSaida);
-
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 330, 320));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 50, 340, 320));
 
         jLabel5.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 140));
         jLabel5.setText("LISTA DE PRODUTOS");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, -1, -1));
 
-        tfdQuantidade.setToolTipText("Informe uma quantidade de produtos");
-        tfdQuantidade.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 140), 2, true));
-        jPanel1.add(tfdQuantidade, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 150, 100, -1));
+        tfdQuantidadeSaida.setToolTipText("Informe uma quantidade de produtos");
+        tfdQuantidadeSaida.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 140), 2, true));
+        jPanel1.add(tfdQuantidadeSaida, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 150, 100, -1));
 
         btnEfetuarSaida.setBackground(new java.awt.Color(0, 0, 140));
         btnEfetuarSaida.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
@@ -127,7 +104,7 @@ public class DialogSaida extends javax.swing.JDialog {
                 btnEfetuarSaidaActionPerformed(evt);
             }
         });
-        jPanel1.add(btnEfetuarSaida, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 380, 130, 30));
+        jPanel1.add(btnEfetuarSaida, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 380, 130, 30));
 
         btnAdicionarSaida.setBackground(new java.awt.Color(0, 0, 140));
         btnAdicionarSaida.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
@@ -141,6 +118,34 @@ public class DialogSaida extends javax.swing.JDialog {
             }
         });
         jPanel1.add(btnAdicionarSaida, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 180, 140, 30));
+
+        tblListaDeProdutosParaAddNaSaida.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
+        tblListaDeProdutosParaAddNaSaida.setForeground(new java.awt.Color(0, 0, 140));
+        tblListaDeProdutosParaAddNaSaida.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "SKU", "Descrição", "Preço", "Quantidade"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tblListaDeProdutosParaAddNaSaida.setGridColor(new java.awt.Color(0, 0, 0));
+        tblListaDeProdutosParaAddNaSaida.setSelectionBackground(new java.awt.Color(153, 204, 255));
+        tblListaDeProdutosParaAddNaSaida.setSelectionForeground(new java.awt.Color(255, 255, 254));
+        jScrollPane3.setViewportView(tblListaDeProdutosParaAddNaSaida);
+
+        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 330, 320));
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
@@ -264,10 +269,10 @@ public class DialogSaida extends javax.swing.JDialog {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable tblListaDeProdutosSaida;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTable tblListaDeProdutosParaAddNaSaida;
     private javax.swing.JTable tblListaDeSaida;
-    private javax.swing.JTextField tfdQuantidade;
+    private javax.swing.JTextField tfdQuantidadeSaida;
     // End of variables declaration//GEN-END:variables
 }
